@@ -3139,12 +3139,6 @@
 		(uuid "63e9357d-65ba-421f-87c5-75eef2abe82d")
 	)
 	(junction
-		(at 148.59 36.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "80352223-6ea0-4b5a-ab09-1d155d5f2d6e")
-	)
-	(junction
 		(at 140.97 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3185,6 +3179,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c1d2fccc-56f3-4113-8908-1f2975eb3d1b")
+	)
+	(junction
+		(at 184.15 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c41bb49b-5306-4d92-839f-497608cc2763")
 	)
 	(junction
 		(at 138.43 45.72)
@@ -3358,6 +3358,16 @@
 	)
 	(wire
 		(pts
+			(xy 184.15 85.09) (xy 198.12 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "238c09c6-67bb-4225-b75a-b2133c62eabe")
+	)
+	(wire
+		(pts
 			(xy 138.43 45.72) (xy 140.97 45.72)
 		)
 		(stroke
@@ -3375,6 +3385,16 @@
 			(type default)
 		)
 		(uuid "3315dcfd-c6f8-4243-adbb-387be4d7eb39")
+	)
+	(wire
+		(pts
+			(xy 184.15 81.28) (xy 184.15 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "338f149f-b2ee-488b-85ca-c88fd3c98d14")
 	)
 	(wire
 		(pts
@@ -3398,7 +3418,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 85.09) (xy 198.12 85.09)
+			(xy 161.29 85.09) (xy 184.15 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3548,6 +3568,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 90.17) (xy 168.91 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "860ab32f-7a0f-4cfc-9c29-21c8995abf3d")
+	)
+	(wire
+		(pts
 			(xy 181.61 36.83) (xy 189.23 36.83)
 		)
 		(stroke
@@ -3655,16 +3685,6 @@
 			(type default)
 		)
 		(uuid "b4e5a21d-35f5-45f4-a46e-5b8f4888e311")
-	)
-	(wire
-		(pts
-			(xy 148.59 46.99) (xy 148.59 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b945c403-2bbf-443f-a62a-5a7eb1333350")
 	)
 	(wire
 		(pts
@@ -5402,6 +5422,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 184.15 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a4d02f1-82b8-460b-8c98-5da90a38fbaf")
+		(property "Reference" "R2"
+			(at 186.69 76.1999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k5"
+			(at 186.69 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.372 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 184.15 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 184.15 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7b848029-978d-4d99-9b96-7c4914cd5d99")
+		)
+		(pin "1"
+			(uuid "b38b786a-b0d9-4a5b-8792-92d83f1ccc8a")
+		)
+		(instances
+			(project ""
+				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 85.09 41.91 0)
 		(unit 1)
@@ -5536,6 +5626,71 @@
 			(project "rubiks-cub"
 				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
 					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 184.15 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b3409bb5-7203-4f6c-84e8-3b75c79992fc")
+		(property "Reference" "#PWR013"
+			(at 184.15 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 184.15 70.104 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 184.15 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed0bef99-91e2-479d-b900-428f08e5f4a9")
+		)
+		(instances
+			(project "rubiks-cub"
+				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
