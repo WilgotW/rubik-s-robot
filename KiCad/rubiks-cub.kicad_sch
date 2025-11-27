@@ -6671,6 +6671,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 171.45 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5084197-0c4d-4d66-b7c1-5f5ebd196aa0")
+		(property "Reference" "R3"
+			(at 173.99 62.2299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k5"
+			(at 173.99 64.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 169.672 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 171.45 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 171.45 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d79b62b3-ae1e-40e3-98b4-4f4565a36c07")
+		)
+		(pin "1"
+			(uuid "4f154da5-8de8-4709-93e2-9e853a4eddca")
+		)
+		(instances
+			(project "rubiks-cub"
+				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 143.51 143.51 0)
 		(unit 1)
