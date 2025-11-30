@@ -7919,7 +7919,7 @@
 		)
 		(uuid "2a2deed2-6d2a-4137-af21-1f88598905b4")
 	)
-	(label "+12"
+	(label "+12V"
 		(at 156.21 219.71 180)
 		(effects
 			(font
