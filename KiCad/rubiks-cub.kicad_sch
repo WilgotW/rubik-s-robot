@@ -4869,7 +4869,7 @@
 		(uuid 3c8603f0-bd77-4c88-be1d-52811a58b348)
 	)
 	(rectangle
-		(start 127 41.91)
+		(start 127 43.18)
 		(end 295.91 191.77)
 		(stroke
 			(width 0)
@@ -5019,7 +5019,7 @@
 	)
 	(text "Microcontroller and USB\n"
 		(exclude_from_sim no)
-		(at 148.082 44.958 0)
+		(at 147.066 39.37 0)
 		(effects
 			(font
 				(size 2.2 2.2)
@@ -5028,6 +5028,16 @@
 			)
 		)
 		(uuid "f6d17d89-061a-41d7-95c1-2bdb359b8c2a")
+	)
+	(text "Connect NEMA17\nstepper motor\n"
+		(exclude_from_sim no)
+		(at 169.672 176.022 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+		(uuid "f7814c8a-5fdd-4bcf-b010-8f658424ce37")
 	)
 	(junction
 		(at 161.29 130.81)
@@ -5762,16 +5772,6 @@
 			(type default)
 		)
 		(uuid "22266eb7-332a-447b-8e78-5005467cd1e4")
-	)
-	(wire
-		(pts
-			(xy 167.64 204.47) (xy 167.64 219.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "23d039ec-af50-4556-a2fe-4d41aaee25d6")
 	)
 	(wire
 		(pts
@@ -6555,6 +6555,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 219.71) (xy 173.99 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82a641bf-dfed-44ad-a802-590476f33992")
+	)
+	(wire
+		(pts
 			(xy 171.45 209.55) (xy 177.8 209.55)
 		)
 		(stroke
@@ -7282,6 +7292,16 @@
 			(type default)
 		)
 		(uuid "c3fabfe6-9f78-4421-ac2c-116dae74b9da")
+	)
+	(wire
+		(pts
+			(xy 167.64 204.47) (xy 167.64 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c47e42f1-1bbd-45a5-9ef0-4f98168c1f86")
 	)
 	(wire
 		(pts
@@ -12779,6 +12799,71 @@
 			(project "rubiks-cub"
 				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 173.99 219.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c7942b51-c313-449c-b118-105487b57fb1")
+		(property "Reference" "#PWR034"
+			(at 173.99 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 173.99 216.154 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "22dc635f-0801-4f60-bba5-bc51b92ec28a")
+		)
+		(instances
+			(project "rubiks-cub"
+				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
