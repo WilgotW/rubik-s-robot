@@ -11,6 +11,128 @@
 		(company "Wilgot Wardell")
 	)
 	(lib_symbols
+		(symbol "Connector:Conn_01x01_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x01_Pin"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x01, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x01_Pin_1_1"
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x03_Pin"
 			(pin_names
 				(offset 1.016)
@@ -4974,7 +5096,7 @@
 		)
 		(uuid "a9a2d065-817d-4224-81a1-727d05c1ab81")
 	)
-	(text "A4988 motor driver for \nthe NEMA 14 stepper motor "
+	(text "A4988 motor driver for \nthe NEMA 17 stepper motor "
 		(exclude_from_sim no)
 		(at 143.002 141.478 0)
 		(effects
@@ -4986,7 +5108,7 @@
 	)
 	(text "Connect external \nLM2596 buck converter"
 		(exclude_from_sim no)
-		(at 138.43 202.184 0)
+		(at 140.716 200.66 0)
 		(effects
 			(font
 				(size 1 1)
@@ -6561,7 +6683,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 219.71) (xy 173.99 219.71)
+			(xy 167.64 219.71) (xy 171.45 219.71)
 		)
 		(stroke
 			(width 0)
@@ -7859,6 +7981,16 @@
 		)
 		(uuid "0e968b08-3e67-41c2-a691-8826fb28b749")
 	)
+	(label "VCAP"
+		(at 196.85 143.51 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13a61846-2ea1-4ba8-95a5-70b004192728")
+	)
 	(label "HSE_OUT"
 		(at 189.23 90.17 0)
 		(effects
@@ -8685,6 +8817,71 @@
 			(project "rubiks-cub"
 				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
 					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 147.32 209.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1dbf4866-faab-436c-b044-625af383945a")
+		(property "Reference" "J14"
+			(at 143.764 209.296 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 112.268 207.264 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 147.32 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 147.32 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fbf9a724-eb8f-4d58-a477-d7e3b7b06b24")
+		)
+		(instances
+			(project "rubiks-cub"
+				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
+					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -9613,7 +9810,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 147.066 215.646 0)
+			(at 151.384 216.408 0)
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -9719,6 +9916,71 @@
 			(project "rubiks-cub"
 				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
 					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 147.32 207.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "36c128c3-d144-4e78-ab1f-facbba7781a0")
+		(property "Reference" "J13"
+			(at 143.764 206.756 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 112.268 204.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 147.32 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 147.32 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fa56e9ad-83af-4243-b797-9c15eeab8dfc")
+		)
+		(instances
+			(project "rubiks-cub"
+				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
+					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -9929,6 +10191,71 @@
 			(project "rubiks-cub"
 				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 147.32 212.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3fcb3e77-fc97-40d1-bad7-3631095a961a")
+		(property "Reference" "J15"
+			(at 143.764 211.836 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 112.268 209.804 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 147.32 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 147.32 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c58ed9d-7b57-406b-ad92-56d78460de2b")
+		)
+		(instances
+			(project "rubiks-cub"
+				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
+					(reference "J15")
 					(unit 1)
 				)
 			)
@@ -11556,83 +11883,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x04_Pin")
-		(at 147.32 209.55 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8b3ea2ed-8ed8-4851-8e46-062da312afb9")
-		(property "Reference" "J6"
-			(at 146.05 207.0099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Conn_01x04_Pin"
-			(at 146.05 209.5499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical"
-			(at 147.32 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 147.32 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 147.32 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "85cbf260-c6a5-4d7a-a2f6-790e3f1971a9")
-		)
-		(pin "3"
-			(uuid "9e7303aa-a2da-4095-b81d-8fa454ae178e")
-		)
-		(pin "1"
-			(uuid "d6933ac8-3976-496d-ae7e-97b1f2a9c7c1")
-		)
-		(pin "2"
-			(uuid "5d539d6c-d3d9-46a7-8a1b-f6d77c822146")
-		)
-		(instances
-			(project "rubiks-cub"
-				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 140.97 123.19 0)
 		(unit 1)
@@ -12907,7 +13157,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 173.99 219.71 0)
+		(at 171.45 219.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12915,7 +13165,7 @@
 		(dnp no)
 		(uuid "c7942b51-c313-449c-b118-105487b57fb1")
 		(property "Reference" "#PWR034"
-			(at 173.99 223.52 0)
+			(at 171.45 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12924,7 +13174,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 173.99 216.154 0)
+			(at 171.45 216.154 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12932,7 +13182,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 219.71 0)
+			(at 171.45 219.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12941,7 +13191,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 219.71 0)
+			(at 171.45 219.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12950,7 +13200,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 173.99 219.71 0)
+			(at 171.45 219.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13709,6 +13959,71 @@
 			(project ""
 				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 147.32 204.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ea66dd8e-e528-4cd4-a58f-0690c1860afa")
+		(property "Reference" "J6"
+			(at 143.764 204.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x01_Pin"
+			(at 112.268 202.184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 147.32 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 147.32 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e8788256-3599-4fd3-9bd1-9f5547326f3e")
+		)
+		(instances
+			(project "rubiks-cub"
+				(path "/0d0eb51a-0624-4b1b-872b-cd4472588f67"
+					(reference "J6")
 					(unit 1)
 				)
 			)
