@@ -8168,11 +8168,11 @@
 		)
 		(uuid "2a2deed2-6d2a-4137-af21-1f88598905b4")
 	)
-	(label "+12V"
+	(label "DC_IN"
 		(at 156.21 219.71 180)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 1 1)
 			)
 			(justify right bottom)
 		)
