@@ -1,3 +1,5 @@
+LCSC Part 
+
 "Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet"
 "A1","1","Pololu_Breakout_A4988","","","","Module:Pololu_Breakout-16_15.2x20.3mm","https://www.pololu.com/product/2980/pictures"
 "C1,C2,C3,C4,C9,C16","6","100n","","","","Capacitor_SMD:C_0402_1005Metric","~"
