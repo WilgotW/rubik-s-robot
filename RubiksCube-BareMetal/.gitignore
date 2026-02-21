@@ -1,0 +1,19 @@
+# Build directories and outputs
+Debug/
+Release/
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.su
+
+# IDE Specific files to ignore
+.metadata/
+.settings/
+*.launch
+
+# OS Specific
+.DS_Store
+Thumbs.db
