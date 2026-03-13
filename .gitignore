@@ -23,3 +23,9 @@ __pycache__/
 /KiCad/*.drl
 /KiCad/*.pos
 /KiCad/*.rpt
+
+
+#embedded code
+/rubiks-bare-metal/build
+/rubiks-bare-metal/mx.scratch
+/rubiks-bare-metal/!.settings
