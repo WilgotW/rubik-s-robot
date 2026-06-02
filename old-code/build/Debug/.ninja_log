@@ -1,0 +1,22 @@
+# ninja log v7
+4	136	1773571169005358617	CMakeFiles/rubiks-bare-metal.dir/startup_stm32f401xe.s.obj	2b06d781ebad64d5
+4	172	1773571169004946408	CMakeFiles/rubiks-bare-metal.dir/Core/Src/sysmem.c.obj	8deed51a20ab5dd0
+4	174	1773571169005221950	CMakeFiles/rubiks-bare-metal.dir/Core/Src/syscalls.c.obj	40347cc659004c1a
+3	216	1773571169004521533	CMakeFiles/rubiks-bare-metal.dir/Core/Src/stm32f4xx_hal_msp.c.obj	3382b0ba344bb2b4
+3	221	1773571169004362158	CMakeFiles/rubiks-bare-metal.dir/Core/Src/stm32f4xx_it.c.obj	9c611806cf19f281
+2	115	1774089047910948645	CMakeFiles/rubiks-bare-metal.dir/Core/Src/main.c.obj	20f7d1e968216679
+7	244	1773571169008231700	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj	6dd8329376e149f2
+4	231	1773571169005483492	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj	620bee23ecc094fb
+5	278	1773571169006657242	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj	278ea525b961510c
+136	336	1773571169137687714	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj	173b71707a02da65
+172	316	1773571169172995009	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj	625da9b952529215
+231	377	1773571169232570223	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj	37f5ce799fde3022
+5	256	1773571169006899825	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj	4c92e7a64ec0dafe
+221	393	1773571169222151514	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj	ebf6d43692fd945d
+256	387	1773571169257446809	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	542bd7f8b4535cda
+278	395	1773571169279289812	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj	6330c8085b0698ad
+244	393	1773571169245445850	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj	6c8d5b31906a4b6e
+174	326	1773571169175390384	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj	d6d54646cd501adf
+220	385	1773571169221363389	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj	784cd861dc1ff004
+216	385	1773571169217282722	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj	f88fb3aa10d1733d
+115	209	1774089048024319454	rubiks-bare-metal.elf	8c83b663499aea26

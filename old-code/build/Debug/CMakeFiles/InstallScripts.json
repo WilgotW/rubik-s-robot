@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/wilgot/Documents/coding/embedded-projects/rubik-s-robot/rubiks-bare-metal/build/Debug/cmake_install.cmake",
+		"/Users/wilgot/Documents/coding/embedded-projects/rubik-s-robot/rubiks-bare-metal/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

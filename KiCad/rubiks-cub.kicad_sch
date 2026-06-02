@@ -5258,7 +5258,7 @@
 	)
 	(text "Microcontroller and USB\n"
 		(exclude_from_sim no)
-		(at 147.32 33.274 0)
+		(at 147.066 28.702 0)
 		(effects
 			(font
 				(size 2.2 2.2)
@@ -8097,12 +8097,12 @@
 		(uuid "0e968b08-3e67-41c2-a691-8826fb28b749")
 	)
 	(label "VCAP"
-		(at 196.85 143.51 90)
+		(at 196.85 143.51 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "13a61846-2ea1-4ba8-95a5-70b004192728")
 	)
