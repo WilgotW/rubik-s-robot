@@ -20,13 +20,28 @@ int main(void)
   //The user LED is connected is located at Port A, Pin 5. as seen in the user guide. 
   //in the datasheet, at the block diagram: we can see that PORT A is connected to the AHB1 bus
   //the base address for GPIO Port A is 0x4002 0000.
-  RCC->AHB1ENR |= (1<<0);//enable clock access
   GPIOA->MODER |= (1<<10);
   GPIOA->MODER &= ~(1<<11);
 
 
 
   //UART drivers
+  //The user manual tells that the TX and RX pins are connected to PA2 and PA3
+  //clock access was enabled previously
+  //set moder to alternative function
+  //pin 2 (TX)
+  GPIOA->MODER &= ~(1<<4) 
+  GPIOA->MODER |= (1<<5)
+  //pin 3 (RX)
+  GPIOA->MODER &= ~(1<<6) 
+  GPIOA->MODER |= (1<7)
+  //looking at the alternative function diagram in the datasheet: We need to take the UART function AF07
+  //writing to the AFLR (Alternative Function Low Register) register the UART function:  AF07 = 0111 
+  GPIOA->AFLR |= ((1<<8) | (1<<9) | (1<<10)) //111
+  GPIOA->AFLR &= ~(1<<11) //0
+  
+
+
 
   while (1)
   {
