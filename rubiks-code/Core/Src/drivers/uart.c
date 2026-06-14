@@ -1,5 +1,7 @@
-
+#include <stdint.h>
+#include <sys/types.h>
 #include "uart.h"
+#include "cmsis_gcc.h"
 #include "stm32f401xe.h"
 
 void UART2_Init(void){
@@ -31,7 +33,62 @@ void UART2_Init(void){
 
 }
 
+//THE SETUP
+//STM (slave) recieves command from computer (master) to start scaning cube
+//STM sends an ACK and starts scanning the first side of the cube 
+//STM sends the data and waits for an ACK from computer
+//repeat until all faces are scanned sucessfully. 
+
+
+//example:    cube = 'DRLUUBFBRBLURRLRUBLRDDFDLFUFUFFDBRDUBRUFLLFDDBFLUBLRBD'
+
+void read_cube_face(){
+    //TO DO 
+
+    return {1, 2, 3, 4, 5, 6, 7, 8, 9}
+}
+
+void UART2_protocol(){
+    uint8_t command = UART2_ReceiveByte();
+    if (command == 'R'){
+        USART2_SendByte('A'); //Send ACK
+
+        uint8_t face_data[9] = read_cube_face();
+
+        UART2_SendFace(face_data);
+
+        //wait for ACK
+        uint8_t status = UART2_ReceiveByte();
+        if (status == 'A'){
+            //rotate cube to next face
+        }else if (status == 'N'){
+            //redo face scan
+        }
+    }
+}
+
+uint8_t UART2_ReceiveByte(void) {
+    while ((USART2->SR & (1 << 5)) == 0); //Wait for RXNE (Bit 5)
+    return USART2->DR;
+}
+
+void UART2_SendByte(uint8_t data){
+    while ((USART2->SR & (1<<7)) == 0);
+    USART2->DR = data;
+}
+
 void UART2_WriteChar(char ch){
     while ((USART2->SR & (1<<7) == 0));
     USART2->DR = ch;
+}
+
+void UART2_SendFace(uint8_t face[9]){
+    int sent[9] = {};
+
+    for(int i = 0; i < 9; i++;){
+        while((USART2->SR & (1<<7)) != 0){
+            //wait for register to be ready
+        }
+        USART2->DR = face[i];   
+    }
 }

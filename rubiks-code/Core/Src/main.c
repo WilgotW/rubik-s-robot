@@ -5,13 +5,11 @@
 void SystemClock_Config(void);
 void Error_Handler(void);
 
-
-
-
 int main(void)
 {
   HAL_Init();
   SystemClock_Config();
+  //custom drivers
   UART2_Init();
 
 

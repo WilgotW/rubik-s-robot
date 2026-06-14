@@ -5193,7 +5193,7 @@
 		)
 		(uuid "a9a2d065-817d-4224-81a1-727d05c1ab81")
 	)
-	(text "A4988 motor driver for \nNEMA 17 stepper motor 1"
+	(text "TMC2208 motor driver for \nNEMA 17 stepper motor 1"
 		(exclude_from_sim no)
 		(at 143.002 141.478 0)
 		(effects
@@ -5203,7 +5203,7 @@
 		)
 		(uuid "aa49469c-64ac-4a41-ac68-ff30c678a17b")
 	)
-	(text "A4988 motor driver for \nNEMA 17 stepper motor 2\n"
+	(text "TMC2208 motor driver for \nNEMA 17 stepper motor 2\n"
 		(exclude_from_sim no)
 		(at 255.016 34.798 0)
 		(effects
@@ -5258,7 +5258,7 @@
 	)
 	(text "Microcontroller and USB\n"
 		(exclude_from_sim no)
-		(at 147.066 28.702 0)
+		(at 148.844 33.528 0)
 		(effects
 			(font
 				(size 2.2 2.2)
