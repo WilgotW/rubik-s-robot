@@ -42,6 +42,29 @@ void UART2_Init(void){
 
 //example:    cube = 'DRLUUBFBRBLURRLRUBLRDDFDLFUFUFFDBRDUBRUFLLFDDBFLUBLRBD'
 
+void receive_solution(void) {
+    // 1. Acknowledge the 'S' (Start) command so Python begins sending moves
+    UART2_SendByte('A');
+
+    while (1) {
+        // 2. Wait for the next character from Python
+        uint8_t move = UART2_ReceiveByte();
+
+        // 3. Check if it is the end of the sequence
+        if (move == '-') {
+            UART2_SendByte('A'); // ACK the end command
+            break;               // Break out of the while loop, solution complete!
+        }
+
+        // 4. Interpret the move and physically turn the motor
+        // NOTE: This function needs to block until the physical motor stops moving!
+        // execute_motor_move(move);
+
+        // 5. Send ACK to tell Python "Motor finished, send the next move"
+        UART2_SendByte('A');
+    }
+}
+
 void read_cube_face(){
     //TO DO 
 
@@ -64,6 +87,8 @@ void UART2_protocol(){
         }else if (status == 'N'){
             //redo face scan
         }
+    }else if (command == 'S'){
+        recieve_solution();
     }
 }
 

@@ -1,16 +1,26 @@
 #include "main.h"
-#include "uart.h"
 #include "stm32f401xe.h"
+#include "uart.h"
+#include "motor_driver.h"
 
 void SystemClock_Config(void);
 void Error_Handler(void);
+
+void naive_delay(volatile uint32_t count) {
+    while(count--) {
+        __NOP(); 
+    }
+}
 
 int main(void)
 {
   HAL_Init();
   SystemClock_Config();
   //custom drivers
-  UART2_Init();
+  //UART2_Init();
+  Driver_Init();
+
+
 
 
   //SETUP USER BTN
@@ -28,13 +38,22 @@ int main(void)
 
   while (1)
   {
+    
+
     int btn_pressed = ((GPIOC->IDR & (1<<13)) == 0);
 
     if(btn_pressed){
       GPIOA->ODR &= ~(1<<5);
-      if((USART2->SR & (1<<7)) != 0){
-        UART2_WriteChar('A');
-      } 
+      // if((USART2->SR & (1<<7)) != 0){
+      //   UART2_WriteChar('A');
+      // } 
+      GPIOA->ODR |= (1U << 5);   // Set STEP (PA5) HIGH
+      naive_delay(3500);        // Wait (pulse width)
+
+      GPIOA->ODR &= ~(1U << 5);  // Set STEP (PA5) LOW
+      naive_delay(3500);        // Wait (determines motor speed)
+
+
     }else{
       GPIOA->ODR |= (1<<5);
     }
