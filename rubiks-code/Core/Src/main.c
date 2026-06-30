@@ -16,17 +16,17 @@ int main(void)
 {
   HAL_Init();
   SystemClock_Config();
+
+  //enable clock
+  RCC->AHB1ENR |= ((1<<0) | (1<<1) | (1<<2));
+
   //custom drivers
   //UART2_Init();
   Driver_Init();
 
-
-
-
   //SETUP USER BTN
   //user btn: PC13 - port C, pin 13
   //in the block diagram: Port C is connected to the AHB1 buss.
-  RCC->AHB1ENR |= ((1<<0) | (1<<2)); //enable both user btn and user led 
   GPIOC->MODER &= ~((1<<26) | (1<<27)); //set moder13 to input state (00)
 
   //SETUP USER LED
@@ -38,27 +38,21 @@ int main(void)
 
   while (1)
   {
-    
-
     int btn_pressed = ((GPIOC->IDR & (1<<13)) == 0);
 
     if(btn_pressed){
-      GPIOA->ODR &= ~(1<<5);
-      // if((USART2->SR & (1<<7)) != 0){
-      //   UART2_WriteChar('A');
-      // } 
-      GPIOA->ODR |= (1U << 5);   // Set STEP (PA5) HIGH
-      naive_delay(3500);        // Wait (pulse width)
+      GPIOA->ODR |= (1U << 5); 
+      GPIOB->ODR |= (1U << 6); 
+      naive_delay(3500);       
 
-      GPIOA->ODR &= ~(1U << 5);  // Set STEP (PA5) LOW
-      naive_delay(3500);        // Wait (determines motor speed)
-
+      GPIOA->ODR &= ~(1U << 5); 
+      GPIOB->ODR &= ~(1U << 6);  
+      naive_delay(3500);     
 
     }else{
-      GPIOA->ODR |= (1<<5);
+      GPIOA->ODR &= ~(1U << 5);
+      GPIOB->ODR &= ~(1U << 6);
     }
-    
-    btn_pressed = 0;
     
   }
 }
