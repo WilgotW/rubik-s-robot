@@ -1,7 +1,7 @@
 import serial
 import time 
 
-PORT = '/dev/cu.usbmodem11303' 
+PORT = '/dev/cu.usbmodem1303' 
 BAUD_RATE = 9600 
 TIMEOUT = 5
 
@@ -40,12 +40,15 @@ def send_rotation_commands(solve_commands):
         print("Success, cube is solved!")
         return True
 
-            
-            
-            
 
+def test_controller():
+    with serial.Serial(PORT, BAUD_RATE, timeout=TIMEOUT) as ser:
+        while True:
+            print("Enter command: A or B to toggle motors:\n")
+            command = input();
+            if command in ['A', 'B']:
+                ser.write(command.encode('utf-8'))
 
-        
 def scan_all_faces():
     full_cube_data = []
 

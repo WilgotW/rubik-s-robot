@@ -21,7 +21,7 @@ int main(void)
   RCC->AHB1ENR |= ((1<<0) | (1<<1) | (1<<2));
 
   //custom drivers
-  //UART2_Init();
+  UART2_Init();
   Driver_Init();
 
   //SETUP USER BTN
@@ -36,23 +36,28 @@ int main(void)
   GPIOA->MODER |= (1<<10);
   GPIOA->MODER &= ~(1<<11);
 
+
   while (1)
   {
-    int btn_pressed = ((GPIOC->IDR & (1<<13)) == 0);
-
-    if(btn_pressed){
-      GPIOA->ODR |= (1U << 5); 
-      GPIOB->ODR |= (1U << 6); 
-      naive_delay(3500);       
-
-      GPIOA->ODR &= ~(1U << 5); 
-      GPIOB->ODR &= ~(1U << 6);  
-      naive_delay(3500);     
-
-    }else{
-      GPIOA->ODR &= ~(1U << 5);
-      GPIOB->ODR &= ~(1U << 6);
+    if ((USART2->SR & (1 << 5)) != 0){
+      UART2_protocol();
     }
+    // int btn_pressed = ((GPIOC->IDR & (1<<13)) == 0);
+
+    // if(btn_pressed){
+    //   GPIOA->ODR |= (1U << 5); 
+    //   GPIOB->ODR |= (1U << 6); 
+    //   naive_delay(3500);       
+
+    //   GPIOA->ODR &= ~(1U << 5); 
+    //   GPIOB->ODR &= ~(1U << 6);  
+    //   naive_delay(3500);     
+
+    // }else{
+    //   GPIOA->ODR &= ~(1U << 5);
+    //   GPIOB->ODR &= ~(1U << 6);
+    // }
+
     
   }
 }

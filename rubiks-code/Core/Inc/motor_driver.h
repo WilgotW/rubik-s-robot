@@ -1,6 +1,9 @@
 #ifndef MOTOR_DRIVER_H
 #define MOTOR_DRIVER_H
 
-void Driver_Init(void);
+#include <stdint.h>
 
-#endif 
+void Driver_Init(void);
+void execute_motor_move(uint8_t move, uint8_t motor); 
+
+#endif
